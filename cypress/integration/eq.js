@@ -7,11 +7,10 @@ describe('test suite skyscanner', ()=>{
     
         cy.viewport('macbook-15');
         cy.visit('https://www.skyscanner.nl/');
-        cy.get('#footer-root').find('ul'); // find all unordered list
-        // cy.get('#footer-root').find('a'); //find all a tags
-
-        cy.get('#footer-root').find('a').filter('#media-index');
-
+       // cy.get('#footer-root').find('ul').eq(0); 
+        // find all unordered list then select the first one (index 0)
+      cy.get('#footer-root').find('ul').eq(1).find('a');
+     
     })
     
     
